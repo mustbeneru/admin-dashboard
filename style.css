@@ -1,0 +1,242 @@
+style.css
+@font-face {
+    font-family: poppins;
+    src: url(./fonts/Poppins-Regular.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-auto-rows: max-content;
+    background-color: aliceblue;
+}
+
+.sidebar {
+    background-color: rgb(110, 178, 178);
+    grid-row: 1 / 4;
+    min-height: 100vh;
+}
+
+
+.header {
+    display: grid;
+    padding: 1.5rem;
+    background-color: #e2e8f0;
+    grid-column: 2 / 3;
+}
+
+.searchBar {
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    padding-left: 8px;
+    height: 2rem;
+    border-style: none;
+    border: .5px solid black;
+}
+
+.header > .top {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    align-items: center;
+}
+
+
+.top > .search {
+    display: grid;
+    grid-template-columns: 1fr 100%;
+    gap: 1rem;
+}
+
+.top > .right {
+    display: grid;
+    grid-template-columns: repeat(2, 10%) 40%; 
+    justify-content: end;
+    align-items: center;
+    gap: 1rem;
+}
+
+.pfp {
+    width: 50px;
+    height: 50px;
+}
+
+.top > .right > .text {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+img {
+    width: 32px;
+    height: 32px;
+}
+
+img,
+.pfp {
+    border-radius: 50%;
+}
+
+.bottom > .pfp {
+    width: 70px;
+    height: 70px;
+}
+
+.header > .bottom {
+    display: grid;
+    margin-top: 1rem;
+    grid-template-columns: 1fr 5fr 5fr  ;
+    align-items: center;
+}
+
+.header .name {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.buttons {
+  text-align: end;
+  margin-right: 3rem;
+}
+
+
+.buttons > button{
+    background-color: skyblue;
+    color: black;
+    padding: 8px 32px;
+    border-radius: 8px 16px;
+    border-style: none;
+    font-size: 1rem;
+    margin: .7rem;
+    border: 1px solid rgba(0, 0, 0, 0.389);
+}
+
+.sidebar {
+    padding: 2rem;
+    font-size: 1.2rem;
+    color: black;
+}
+
+.sidebar > .dashboard,
+.sidebar ul {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    align-items: center;
+    gap: 1rem;
+}
+
+.sidebar > .dashboard {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+.dashboard img {
+    width: 50px;
+    height: 50px;
+}
+
+.sidebar > .top { 
+    margin-bottom: 2rem;
+}
+
+.content {
+    padding: 2rem;
+    gap: 2rem;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.content > .left > .text,
+.content > .right > .text,
+.title {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.left > .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding-top: 1rem;
+}
+
+
+.announcements > .text {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.announcements > .card {
+    margin: 1rem 0 2rem;
+}
+
+.card {
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+.trending {
+    display: grid;
+}
+
+.trending > .text {
+    font-weight: bold;
+    font-size: 1.5rem;
+}   
+
+.trending > .card {
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+.right > .card {
+    margin-top: 1rem;
+    gap: 3rem;
+}
+
+.trending {
+    display: grid;
+    align-items: center;
+}
+
+.content > .right img {
+    width: 50px;
+    height: 50px;
+}
+
+.trends {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 8px;
+    margin: 8px;
+}
+
+.content .icons {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: end;
+    gap: 1rem;
+}
+
+.announcements .border {
+    border-bottom: 1px solid gray;
+    margin: 1rem 0;
+    opacity: 50%;
+}
+
+img:hover,
+button:hover,
+.sidebar ul:hover,
+.sidebar .dashboard:hover {
+    cursor: pointer;
+    color: whitesmoke;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
